@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style type="text/css">
+		{
+			box-sizing: border-box;
+		}
+		.divmain
+		{
+			height: 500px;
+			width: 350px;
+			background-color: rgb(118, 57, 153,0.5);
+            margin-left: 40%;
+            position: relative;
+            border-radius: 40px;
+            position: fixed;
+            margin-top:20px ;
+		}
+		.divmain:hover
+		{
+			transform: scale(1.1);
+			transition-duration: 1.5s;
+		}
+		.div1
+		{
+			position: absolute;
+			height: 50px;
+			width: 400px;
+			
+		}
+		.div1 input
+		{
+			height: 50px;
+			width: 340px;
+			background-color: transparent;
+			border: none;
+			border-bottom: 2px solid black;
+			margin-left: 5px;
+			font-size: 25px;
+			margin-top: 20px;
+			color: white;
+		}
+		.divA
+		{
+			position: absolute;
+			margin-top: 80px;
+            margin-left: 5px;
+		}
+		#div2 input
+		{
+			height: 40px;
+			width: 60px;
+			border-radius: 20px;
+			font-weight: bolder;
+			background-color: orange;
+			border: none;
+		}
+		#div2
+		{
+			padding: 12px;
+		}
+		#div2 input:hover
+		{
+			transform: scale(0.95);
+			transition-duration: 0.5s;
+			box-shadow: 0px 0px 10px aquamarine;
+			background-color: darkorange;
+		}
+		body
+		{
+			background-image: url("C:\\Users\\Rog\\Documents\\sachidanand.html\\colorful_cubes-wallpaper-1920x1080.jpg");
+		}
+
+
+	</style>
+	<title></title>
+</head>
+<body>
+	<marquee scrollamount=100 behavior=slide><h3 style="font-family: Georgia; color: white;">SCIENTIFIC CACULATOR.</h3></marquee>
+	<marquee scrollamount=100 behavior=slide><h4 style="font-family: Georgia; color: white;">If you want to use trignometric functions or root or square, first declare the value!</h4></marquee>
+	<div class="divmain">
+	<div class="div1">
+		<input type="text" name="" class="op" id="op">
+	</div>
+    <div class="divA">
+	<div id="div2">
+		<input type="button" name="" value="AC" onclick="op.value=''" class="AC" style="background-color: black; color: white;">
+		<input type="button" name="" value="C" onclick="op.value=cancel(op.value)" style="background-color:red; color: white;">
+		<input type="button" name="" value="tan" onclick="op.value=Math.tan(op.value*(Math.PI/180))" style="background-color:#66FF99;">
+		<input type="button" name="" value="cos" onclick="op.value=Math.cos(op.value*(Math.PI/180))" style="background-color:#66FF99;">
+        <input type="button" name="" value="sin" onclick="op.value=Math.sin(op.value*(Math.PI/180))" style="background-color:#66FF99;">
+	</div>
+	<div id="div2">
+		<input type="button" name="" value="x^2" onclick="op.value=Math.pow(op.value,2)" style="background-color:#66FF99;">
+		<input type="button" name="" value="x^3" onclick="op.value=Math.pow(op.value,3)" style="background-color:#66FF99;">
+		<input type="button" name="" value="&Sqrt;" onclick="op.value=Math.sqrt(op.value)" style="background-color:#66FF99;">
+		<input type="button" name="" value="e" onclick="op.value=Math.exp(op.value)" style="background-color:#66FF99;">
+        <input type="button" name="" value="&#x221B;" onclick="op.value=Math.cbrt(op.value)" style="background-color:#66FF99;">
+	</div>
+	<div id="div2">
+		<input type="button" name="" value="1" onclick="op.value+='1'">
+		<input type="button" name="" value="2" onclick="op.value+='2'">
+		<input type="button" name="" value="3" onclick="op.value+='3'">
+		<input type="button" name="" value="-" onclick="op.value+='-'" style="background-color:#66FF99;">
+        <input type="button" name="" value="&plus;" onclick="op.value+='+'" style="background-color:#66FF99;">
+	</div>
+	<div id="div2">
+		<input type="button" name="" value="4" onclick="op.value+='4'">
+		<input type="button" name="" value="5" onclick="op.value+='5'">
+		<input type="button" name="" value="6" onclick="op.value+='6'">
+		<input type="button" name="" value="/" onclick="op.value+='/'" style="background-color:#66FF99;">
+        <input type="button" name="" value="x" onclick="op.value+='x'" style="background-color:#66FF99;">
+	</div>
+	<div id="div2">
+		<input type="button" name="" value="7" onclick="op.value+='7'">
+		<input type="button" name="" value="8" onclick="op.value+='8'">
+		<input type="button" name="" value="9" onclick="op.value+='9'">
+		<input type="button" name="" value="log" onclick="op.value=Math.log10(op.value)" style="background-color:#66FF99;">
+        <input type="button" name="" value="&Pi;" onclick="" style="background-color:#66FF99;">
+	</div>
+	<div id="div2">
+		<input type="button" name="" value="." onclick="op.value+='.'">
+		<input type="button" name="" value="0" onclick="op.value+='0'">
+		<input type="button" name="" value="=" onclick="op.value=solve(op.value)">
+		<input type="button" name="" value="%" onclick="op.value=op.value*100" style="background-color:#66FF99;">
+        <input type="button" name="" value="x!" onclick="op.value=fact(op.value)" style="background-color:#66FF99;">
+	  </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="index.js">
+  	
+  </script>
+</body>
+</html>
